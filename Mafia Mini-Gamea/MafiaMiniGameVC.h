@@ -10,4 +10,6 @@
 
 @interface MafiaMiniGameVC : UIViewController
 
+@property int lives;
+
 @end

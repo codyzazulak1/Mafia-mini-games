@@ -10,4 +10,6 @@
 
 @interface MafiaInfoVC : UIViewController
 
+@property int lives;
+
 @end

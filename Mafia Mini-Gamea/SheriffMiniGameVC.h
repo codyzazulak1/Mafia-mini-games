@@ -10,4 +10,6 @@
 
 @interface SheriffMiniGameVC : UIViewController
 
+@property int lives;
+
 @end

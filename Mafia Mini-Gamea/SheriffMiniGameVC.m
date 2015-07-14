@@ -7,13 +7,13 @@
 //
 
 #import "SheriffMiniGameVC.h"
+#import "SheriffInfoVC.h"
 #include <stdlib.h>
 
 @interface SheriffMiniGameVC ()
 
 @property (weak, nonatomic) IBOutlet UITextField *pickedNumberTextField;
 @property (weak, nonatomic) IBOutlet UILabel *winOrLoseLabel;
-@property int lives;
 
 @end
 
@@ -30,6 +30,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"gameToSheriffSegue"]) {
+        SheriffInfoVC *sheriffVC = (SheriffInfoVC *)segue.destinationViewController;
+        sheriffVC.lives = _lives;
+    }
+}
+
 - (IBAction)submitButtonPressed:(UIButton *)sender {
     int target = arc4random_uniform(5)+1;
     
@@ -38,10 +45,9 @@
     if (guess == target) {
         [self.winOrLoseLabel setText:[NSString stringWithFormat:@"Guess: %i, Goal: %i, Winner!", guess, target]];
         [self.winOrLoseLabel setHidden:NO];
-        UITabBarController *tabCont = (UITabBarController *)[self parentViewController];
-        [tabCont setSelectedIndex:0];
-        self.lives--;
+        --self.lives;
         NSLog(@"Lives: %d", self.lives);
+        [self performSegueWithIdentifier:@"gameToSheriffSegue" sender:self];
     } else {
         [self.winOrLoseLabel setText:[NSString stringWithFormat:@"Guess: %i, Goal: %i, Wrong!", guess, target]];
         [self.winOrLoseLabel setHidden:NO];

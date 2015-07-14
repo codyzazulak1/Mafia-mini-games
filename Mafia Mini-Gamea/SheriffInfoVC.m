@@ -12,7 +12,6 @@
 @interface SheriffInfoVC ()
 
 @property (weak, nonatomic) IBOutlet UILabel *mafiaMembersLabel;
-@property int lives;
 
 @end
 
@@ -20,10 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    SheriffMiniGameVC *vc = [[SheriffMiniGameVC alloc] init];
-    
-//    [self.mafiaMembersLabel setText:[NSString stringWithFormat:@"%i Innocent People Left!", self.lives]];
+    self.lives = 3;
+    [self.mafiaMembersLabel setText:[NSString stringWithFormat:@"%i Innocent People Left!", self.lives]];
 }
 
 - (void)didReceiveMemoryWarning {

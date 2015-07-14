@@ -10,4 +10,6 @@
 
 @interface SheriffInfoVC : UIViewController
 
+@property int lives;
+
 @end

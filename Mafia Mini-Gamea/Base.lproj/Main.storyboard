@@ -55,6 +55,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-396" y="379"/>
         </scene>
         <!--Sheriff Mini Game-->
         <scene sceneID="Tf0-py-Ra9">
@@ -114,7 +115,7 @@
                     <connections>
                         <outlet property="pickedNumberTextField" destination="YPo-CC-MyD" id="ojY-BM-xLN"/>
                         <outlet property="winOrLoseLabel" destination="SZD-t0-vme" id="Ty9-4Y-40S"/>
-                        <segue destination="12t-y1-zAv" kind="show" identifier="sheriffGameToInfoSegue" id="F1z-ak-VN0"/>
+                        <segue destination="Scp-Pw-Arv" kind="show" identifier="gameToSheriffSegue" id="qvA-N2-E8G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4r9-Vr-NX4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -179,11 +180,12 @@
                     <connections>
                         <outlet property="pickedNumberTextField" destination="tzc-Xk-uAW" id="y6t-uC-Swq"/>
                         <outlet property="winOrLoseLabel" destination="sF7-Yi-DdT" id="xXd-8e-e2d"/>
+                        <segue destination="0Te-h9-e4S" kind="show" identifier="gameToMafiaSegue" id="yL3-wX-439"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FFU-Lw-Cku" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1148" y="1376"/>
+            <point key="canvasLocation" x="1148" y="1408"/>
         </scene>
         <!--Mafia Info-->
         <scene sceneID="14c-6l-Ixu">
@@ -293,6 +295,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="F1z-ak-VN0"/>
+        <segue reference="qvA-N2-E8G"/>
+        <segue reference="yL3-wX-439"/>
     </inferredMetricsTieBreakers>
 </document>

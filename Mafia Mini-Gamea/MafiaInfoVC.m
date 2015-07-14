@@ -12,7 +12,6 @@
 @interface MafiaInfoVC ()
 
 @property (weak, nonatomic) IBOutlet UILabel *innocentPeopleLabel;
-@property int lives;
 
 @end
 
@@ -20,10 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    MafiaMiniGameVC *vc = [[MafiaMiniGameVC alloc] init];
-    
-//    [self.innocentPeopleLabel setText:[NSString stringWithFormat:@"%i Innocent People Left!", self.lives]];
+    self.lives = 3;
+    [self.innocentPeopleLabel setText:[NSString stringWithFormat:@"%i Innocent People Left!", self.lives]];
 }
 
 - (void)didReceiveMemoryWarning {
