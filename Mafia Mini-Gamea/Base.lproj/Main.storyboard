@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t1y-rI-rCF">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Play As Sheriff">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Scp-Pw-Arv" kind="show" id="9lb-w3-4rV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vuu-pg-NZ6">
+                                <rect key="frame" x="0.0" y="300" width="600" height="300"/>
+                                <color key="backgroundColor" red="0.25098039220000001" green="0.63137254899999995" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Play As Mafia">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="0Te-h9-e4S" kind="show" id="LzW-pB-mMW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="t1y-rI-rCF" secondAttribute="trailing" id="J26-7j-8qT"/>
+                            <constraint firstItem="t1y-rI-rCF" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="NmK-aP-Xfi"/>
+                            <constraint firstItem="t1y-rI-rCF" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="W3y-uZ-mQ6"/>
+                            <constraint firstAttribute="trailing" secondItem="Vuu-pg-NZ6" secondAttribute="trailing" id="X2v-8I-j67"/>
+                            <constraint firstItem="t1y-rI-rCF" firstAttribute="height" secondItem="Vuu-pg-NZ6" secondAttribute="height" id="XAP-AJ-Nix"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Vuu-pg-NZ6" secondAttribute="bottom" id="eKX-sT-Nq8"/>
+                            <constraint firstItem="Vuu-pg-NZ6" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="foe-Sx-wJP"/>
+                            <constraint firstItem="Vuu-pg-NZ6" firstAttribute="top" secondItem="t1y-rI-rCF" secondAttribute="bottom" id="hVM-vn-lAk"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Sheriff Mini Game-->
+        <scene sceneID="Tf0-py-Ra9">
+            <objects>
+                <viewController title="Sheriff Mini Game" id="BED-Fn-tXF" customClass="SheriffMiniGameVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5lb-Dp-Jio"/>
+                        <viewControllerLayoutGuide type="bottom" id="ni9-g4-WkS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6kt-Q0-P5W">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZO-lN-PbJ">
+                                <rect key="frame" x="273" y="285" width="53" height="30"/>
+                                <state key="normal" title="Submit!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitButtonPressed:" destination="BED-Fn-tXF" eventType="touchUpInside" id="Y1t-c3-UoV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick a number between 1-5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhN-6L-IvK">
+                                <rect key="frame" x="16" y="28" width="568" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YPo-CC-MyD">
+                                <rect key="frame" x="16" y="56" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WinOrLose" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SZD-t0-vme">
+                                <rect key="frame" x="16" y="94" width="568" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="KZO-lN-PbJ" secondAttribute="centerX" id="1eT-lV-JoU"/>
+                            <constraint firstItem="YPo-CC-MyD" firstAttribute="leading" secondItem="6kt-Q0-P5W" secondAttribute="leadingMargin" id="2Sa-tm-5aZ"/>
+                            <constraint firstItem="YPo-CC-MyD" firstAttribute="trailing" secondItem="6kt-Q0-P5W" secondAttribute="trailingMargin" id="7Zc-Gz-eTn"/>
+                            <constraint firstItem="SZD-t0-vme" firstAttribute="trailing" secondItem="6kt-Q0-P5W" secondAttribute="trailingMargin" id="7ky-VY-KSR"/>
+                            <constraint firstAttribute="centerY" secondItem="KZO-lN-PbJ" secondAttribute="centerY" id="TPU-o0-thk"/>
+                            <constraint firstItem="zhN-6L-IvK" firstAttribute="top" secondItem="5lb-Dp-Jio" secondAttribute="bottom" constant="8" id="TiH-gt-8SM"/>
+                            <constraint firstItem="zhN-6L-IvK" firstAttribute="leading" secondItem="6kt-Q0-P5W" secondAttribute="leadingMargin" id="aAq-MS-WeH"/>
+                            <constraint firstItem="SZD-t0-vme" firstAttribute="top" secondItem="YPo-CC-MyD" secondAttribute="bottom" constant="8" id="eKY-cp-ooN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zhN-6L-IvK" secondAttribute="trailing" id="gqM-XP-dWm"/>
+                            <constraint firstItem="SZD-t0-vme" firstAttribute="leading" secondItem="6kt-Q0-P5W" secondAttribute="leadingMargin" id="qms-mq-A1f"/>
+                            <constraint firstItem="YPo-CC-MyD" firstAttribute="top" secondItem="zhN-6L-IvK" secondAttribute="bottom" constant="8" id="rOW-Mg-QAq"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Mini Game" id="08k-Ch-r9v"/>
+                    <connections>
+                        <outlet property="pickedNumberTextField" destination="YPo-CC-MyD" id="ojY-BM-xLN"/>
+                        <outlet property="winOrLoseLabel" destination="SZD-t0-vme" id="Ty9-4Y-40S"/>
+                        <segue destination="12t-y1-zAv" kind="show" identifier="sheriffGameToInfoSegue" id="F1z-ak-VN0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4r9-Vr-NX4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1148" y="18"/>
+        </scene>
+        <!--Mafia Mini Game-->
+        <scene sceneID="2rX-qX-diG">
+            <objects>
+                <viewController title="Mafia Mini Game" id="Be6-Eh-eOK" customClass="MafiaMiniGameVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="exD-xb-HUe"/>
+                        <viewControllerLayoutGuide type="bottom" id="yQW-z3-u9J"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oBG-hx-8rq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XLK-5T-xbp">
+                                <rect key="frame" x="274" y="285" width="53" height="30"/>
+                                <state key="normal" title="Submit!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitButtonPressed:" destination="Be6-Eh-eOK" eventType="touchUpInside" id="xbv-OJ-Zxc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick a number between 1-5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WAh-b6-WqZ">
+                                <rect key="frame" x="16" y="28" width="568" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tzc-Xk-uAW">
+                                <rect key="frame" x="16" y="56" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WinOrLose" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sF7-Yi-DdT">
+                                <rect key="frame" x="16" y="94" width="568" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tzc-Xk-uAW" firstAttribute="trailing" secondItem="oBG-hx-8rq" secondAttribute="trailingMargin" id="8D6-8s-aEd"/>
+                            <constraint firstItem="WAh-b6-WqZ" firstAttribute="leading" secondItem="oBG-hx-8rq" secondAttribute="leadingMargin" id="Bm0-lI-mqp"/>
+                            <constraint firstItem="WAh-b6-WqZ" firstAttribute="top" secondItem="exD-xb-HUe" secondAttribute="bottom" constant="8" id="GiW-bV-HVZ"/>
+                            <constraint firstItem="WAh-b6-WqZ" firstAttribute="trailing" secondItem="oBG-hx-8rq" secondAttribute="trailingMargin" id="R6I-a9-mdh"/>
+                            <constraint firstItem="sF7-Yi-DdT" firstAttribute="trailing" secondItem="oBG-hx-8rq" secondAttribute="trailingMargin" id="V1h-ee-yyG"/>
+                            <constraint firstAttribute="centerY" secondItem="XLK-5T-xbp" secondAttribute="centerY" id="WmZ-Wi-KcM"/>
+                            <constraint firstAttribute="centerX" secondItem="XLK-5T-xbp" secondAttribute="centerX" id="ZVX-Zr-6pu"/>
+                            <constraint firstItem="sF7-Yi-DdT" firstAttribute="leading" secondItem="oBG-hx-8rq" secondAttribute="leadingMargin" id="e1N-ms-EbX"/>
+                            <constraint firstItem="tzc-Xk-uAW" firstAttribute="leading" secondItem="oBG-hx-8rq" secondAttribute="leadingMargin" id="iEK-pd-d5J"/>
+                            <constraint firstItem="tzc-Xk-uAW" firstAttribute="top" secondItem="WAh-b6-WqZ" secondAttribute="bottom" constant="8" id="jZa-OV-fyr"/>
+                            <constraint firstItem="sF7-Yi-DdT" firstAttribute="top" secondItem="tzc-Xk-uAW" secondAttribute="bottom" constant="8" id="mCN-e9-S3C"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Mini Game" id="Hc0-xV-hyR"/>
+                    <connections>
+                        <outlet property="pickedNumberTextField" destination="tzc-Xk-uAW" id="y6t-uC-Swq"/>
+                        <outlet property="winOrLoseLabel" destination="sF7-Yi-DdT" id="xXd-8e-e2d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FFU-Lw-Cku" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1148" y="1376"/>
+        </scene>
+        <!--Mafia Info-->
+        <scene sceneID="14c-6l-Ixu">
+            <objects>
+                <viewController title="Mafia Info" id="Syr-eZ-0nR" customClass="MafiaInfoVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oGs-LC-wJ3"/>
+                        <viewControllerLayoutGuide type="bottom" id="G8h-5d-XV5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ogq-Q9-Gqm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 Innocent People Left" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EvO-Qs-bok">
+                                <rect key="frame" x="213" y="289" width="174" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="EvO-Qs-bok" secondAttribute="centerX" id="Mgv-UN-mpE"/>
+                            <constraint firstAttribute="centerY" secondItem="EvO-Qs-bok" secondAttribute="centerY" id="g5J-Es-LnZ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Your Info" id="dmf-2S-Yf8"/>
+                    <connections>
+                        <outlet property="innocentPeopleLabel" destination="EvO-Qs-bok" id="u2q-HL-yzv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9lq-cF-JRl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1147" y="714"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="w4B-DG-Jrv">
+            <objects>
+                <tabBarController id="0Te-h9-e4S" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="cGj-v2-jFr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Syr-eZ-0nR" kind="relationship" relationship="viewControllers" id="kRY-ax-MtY"/>
+                        <segue destination="Be6-Eh-eOK" kind="relationship" relationship="viewControllers" id="rja-DO-nnj"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lSq-kI-npC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="325" y="1046"/>
+        </scene>
+        <!--Sheriff Info-->
+        <scene sceneID="swj-d0-XJt">
+            <objects>
+                <viewController title="Sheriff Info" id="12t-y1-zAv" customClass="SheriffInfoVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nwq-gl-VM0"/>
+                        <viewControllerLayoutGuide type="bottom" id="M6M-BS-URT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hxb-kW-QnX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 Mafia Members Left" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWn-my-cv9">
+                                <rect key="frame" x="216" y="289" width="168" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="UWn-my-cv9" secondAttribute="centerY" id="FOT-4p-RuM"/>
+                            <constraint firstAttribute="centerX" secondItem="UWn-my-cv9" secondAttribute="centerX" id="Hg5-7W-zVQ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Your Info" id="8ba-o8-SYd"/>
+                    <connections>
+                        <outlet property="mafiaMembersLabel" destination="UWn-my-cv9" id="Zvd-0k-h6g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lRD-Ly-EJv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1147" y="-644"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="BWt-4a-f85">
+            <objects>
+                <tabBarController id="Scp-Pw-Arv" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="X13-sF-k67">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="12t-y1-zAv" kind="relationship" relationship="viewControllers" id="NJF-zh-ybS"/>
+                        <segue destination="BED-Fn-tXF" kind="relationship" relationship="viewControllers" id="0Tr-Kk-UIX"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TrQ-sL-AeS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="325" y="-312"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="F1z-ak-VN0"/>
+    </inferredMetricsTieBreakers>
+</document>
